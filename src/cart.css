@@ -1,0 +1,73 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartItem {
+    max-width: 90%; /* Используем максимальную ширину в процентном соотношении */
+    width: 100%;
+    height: auto; /* Используем автоматическую высоту для адаптивности */
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: 30px;
+}
+
+.cartItem img {
+    width: 40%; /* Уменьшаем ширину изображения */
+    margin-right: 20px;
+}
+
+.cartItem .description {
+    flex: 1;
+    font-size: 30px;
+}
+
+.countHandler {
+    display: flex;
+    align-items: center;
+}
+
+.countHandler input {
+    width: 20%; /* Уменьшаем ширину поля ввода */
+    text-align: center;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.checkout {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.checkout button {
+    width: 40%; /* Уменьшаем ширину кнопок */
+    height: 50px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Медиа-запрос для экранов шириной менее 400px */
+@media screen and (max-width: 400px) {
+    .cartItem {
+        flex-direction: column; /* Переходим на вертикальное расположение элементов */
+        align-items: flex-start; /* Выравниваем элементы слева */
+    }
+    .cartItem img {
+        width: 100%; /* Изображение занимает всю доступную ширину */
+        margin-right: 0; /* Удаляем правый отступ */
+        margin-bottom: 10px; /* Добавляем небольшой отступ снизу */
+    }
+    .checkout button {
+        width: 100%; /* Кнопки занимают всю доступную ширину */
+        margin: 10px 0; /* Устанавливаем отступы сверху и снизу */
+    }
+}
